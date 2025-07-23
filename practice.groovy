@@ -9,7 +9,7 @@ pipeline{
     }
     stage('deploying code') {
         steps{
-            sh 'mv /var/lib/jenkins/workspace/agentA/index.html /var/www/html/jewels'
+            sh 'sudo mv /var/lib/jenkins/workspace/agentA/index.html /var/www/html/jewels'
         }
     }   
     stage ('restarting nginx'){
