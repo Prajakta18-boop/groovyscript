@@ -18,5 +18,12 @@ pipeline{
             }
 
         }
+        stage('sending artifact to tomcat server'){
+            steps{
+                sh 'scp target/*.war azureuser@4.186.26.126:/home/azureuser/'
+            }
+
+        }
     }
+    
 }
