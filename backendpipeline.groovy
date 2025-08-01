@@ -19,7 +19,7 @@ pipeline {
 
         stage('Send Artifact to Tomcat Server') {
             steps {
-                sshagent(['tomcat-server']) {
+                sshagent(['jenkinsserver']) {
                     sh 'scp -o StrictHostKeyChecking=no target/*.war azureuser@4.186.26.126:/home/azureuser/'
                 }
             }
