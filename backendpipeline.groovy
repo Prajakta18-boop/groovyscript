@@ -3,7 +3,7 @@ pipeline{
     tools {
         maven 'maven3.9.8'
     }
-        }
+     
    
     stage('clone code') {
         steps{ 
@@ -30,5 +30,5 @@ pipeline{
                 }
             }
         }
-    
-    
+    }
+   
