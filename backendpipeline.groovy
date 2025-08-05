@@ -27,7 +27,7 @@ pipeline {
 
         stage('Deploy Artifact') {
             steps {
-                sshagent(['tomcat-server']) {
+                sshagent(['jenkinsserver']) {
                     sh 'ssh -o StrictHostKeyChecking=no azureuser@4.186.26.126 "sudo mv /home/azureuser/*.war /opt/tomcat/webapps/"'
                 }
             }
