@@ -28,7 +28,7 @@ pipeline {
         stage('Deploy Artifact') {
             steps {
                 sshagent(['jenkinsserver']) {
-                    sh 'ssh -o StrictHostKeyChecking=no azureuser@4.186.26.126 "sudo mv /home/azureuser/*.war /opt/tomcat/webapps/"'
+                    sh 'ssh -o StrictHostKeyChecking=no azureuser@20.193.142.223 "sudo mv /home/azureuser/*.war /opt/tomcat/webapps/"'
                 }
             }
         }
